@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em;
+  ul {
+    display: flex;
+  }
+  .nav-link {
+    list-style: none;
+    margin-left: 4em;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    color: #ef6768;
+  }
+}
