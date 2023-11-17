@@ -1,0 +1,11 @@
+.banner-section {
+  background: url(../../img/banner.png) center/cover;
+  height: 15em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:1em;
+  h1{
+    color:white;
+  }
+}
