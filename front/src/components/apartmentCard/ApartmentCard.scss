@@ -1,14 +1,29 @@
 .apartment-card {
+  position:relative;
   width: 300px;
-
+  height:200px;
+  margin:5px;
+ 
   a {
     text-decoration: none;
   }
+
 }
 
 .apartment-card-img {
   width: 100%;
+  width: 300px;
   object-fit: cover;
   height: 200px;
   border-radius: 0.5em;
+  position:absolute;
+}
+
+.apartment-card-title {
+  position: absolute;
+ 
+  bottom:0;
+  color:white;
+  padding:0.5em;
+
 }
