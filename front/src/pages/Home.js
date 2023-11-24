@@ -1,10 +1,12 @@
 import React from "react";
 import Banner from "../components/banner/Banner";
+import ApartmentList from "../components/apartmentList/ApartmentList";
 
-function Home() {
+const Home = () => {
   return (
     <main>
       <Banner />
+      <ApartmentList />
     </main>
   );
 }

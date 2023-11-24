@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../img/logo.png";
 import "./Header.scss";
 
-function Header() {
+const Header = () => {
   return (
     <header>
       <Link to="/home">

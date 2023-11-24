@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logoFooter from "../../img/logo-footer.png";
 import "./Footer.scss";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer>
       <Link to="/home">
