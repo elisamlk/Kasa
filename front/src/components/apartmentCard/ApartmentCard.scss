@@ -1,0 +1,14 @@
+.apartment-card {
+  width: 300px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.apartment-card-img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+  border-radius: 0.5em;
+}

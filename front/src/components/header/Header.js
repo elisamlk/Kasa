@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <Link to="/home">
-        <img src={logo} alt="Logo" />
+        <img className="logo-header" src={logo} alt="Logo" />
       </Link>
       <nav>
         <ul>
@@ -21,6 +21,6 @@ const Header = () => {
       </nav>
     </header>
   );
-}
+};
 
 export default Header;

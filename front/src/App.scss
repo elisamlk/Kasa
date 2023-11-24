@@ -11,3 +11,14 @@ body {
     padding: 2em 5em 0 5em;
   }
 }
+
+@media screen and (max-width: 766px) {
+  body {
+    header {
+      padding: 1em 2em 0 2em;
+    }
+    main {
+      padding: 1em 2em 0 2em;
+    }
+  }
+}

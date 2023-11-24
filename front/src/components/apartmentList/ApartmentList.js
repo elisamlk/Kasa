@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import "./ApartmentList.scss";
+import ApartmentCard from "../apartmentCard/ApartmentCard";
 
 const ApartmentList = () => {
   const [apartment, setApartment] = useState([]);
@@ -19,16 +21,11 @@ const ApartmentList = () => {
   }, [apartment]);
 
   return (
-    <div>
-      <h2>Liste des appartements</h2>
-      <ul>
-        {apartment.map((item) => (
-          <li key={item.id}>
-            <p>{item.title}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <section className="apartment-list">
+      {apartment.map((item) => (
+        <ApartmentCard cover={item.cover} title={item.title} />
+      ))}
+    </section>
   );
 };
 
