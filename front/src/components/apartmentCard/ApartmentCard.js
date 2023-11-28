@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import "./ApartmentCard.scss";
 
 const ApartmentCard = (props) => {
+  console.log(props.id);
   return (
-    <Link>
+    <Link to={`/apartmentPage/${props.id}`}>
       <div className="apartment-card">
         <img
           className="apartment-card-img"

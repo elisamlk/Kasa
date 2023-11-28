@@ -9,6 +9,6 @@ const Home = () => {
       <ApartmentList />
     </main>
   );
-}
+};
 
 export default Home;
