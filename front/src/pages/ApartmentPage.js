@@ -5,6 +5,7 @@ import ApartmentTitle from "../components/apartmentTitle/ApartmentTitle";
 import Tags from "../components/tags/Tags";
 import Host from "../components/host/Host";
 import Rating from "../components/rating/Rating";
+import Collapse from "../components/collapse/Collapse";
 
 const ApartmentPage = () => {
   const { id } = useParams();
@@ -33,6 +34,7 @@ const ApartmentPage = () => {
   }
   const listPictures = filteredApartment.pictures;
   const host = filteredApartment.host;
+ 
   console.log("filtre", filteredApartment);
   console.log(listPictures);
   return (
@@ -50,6 +52,10 @@ const ApartmentPage = () => {
         <Tags tags={filteredApartment.tags} />
         <Host picture={host.picture} name={host.name} />
         <Rating rating={filteredApartment.rating}/>
+      </section>
+      <section>
+      <Collapse title="Description" content={filteredApartment.description} />
+      <Collapse title="Equipment" content={filteredApartment.equipments.join(', ')} />
       </section>
     </main>
   );
