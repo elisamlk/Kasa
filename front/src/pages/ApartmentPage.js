@@ -44,11 +44,8 @@ const ApartmentPage = () => {
           title={filteredApartment.title}
           location={filteredApartment.location}
         />
+        <Tags tags={filteredApartment.tags} />
       </section>
-
-      <div>
-        <Tags id={filteredApartment.id} tags={filteredApartment.tags} />
-      </div>
     </main>
   );
 };

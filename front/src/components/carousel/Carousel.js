@@ -5,9 +5,9 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import "./Carousel.scss";
 
 const Carousel = (props) => {
-  const pictures = props;
+  // const pictures = props;
   const listPictures = props.pictures;
-  console.log("1=>", pictures);
+  // console.log("1=>", pictures);
   const [currentIndex, setCurrentIndex] = useState(0);
   const goToPrevSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -19,7 +19,7 @@ const Carousel = (props) => {
       prevIndex === listPictures.length - 1 ? 0 : prevIndex + 1
     );
   };
-  // console.log(pictures);
+ 
   return (
     <div className="carousel">
       <FontAwesomeIcon
