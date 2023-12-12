@@ -4,6 +4,7 @@ import Carousel from "../components/carousel/Carousel";
 import ApartmentTitle from "../components/apartmentTitle/ApartmentTitle";
 import Tags from "../components/tags/Tags";
 import Host from "../components/host/Host";
+import Rating from "../components/rating/Rating";
 
 const ApartmentPage = () => {
   const { id } = useParams();
@@ -48,6 +49,7 @@ const ApartmentPage = () => {
         />
         <Tags tags={filteredApartment.tags} />
         <Host picture={host.picture} name={host.name} />
+        <Rating rating={filteredApartment.rating}/>
       </section>
     </main>
   );
