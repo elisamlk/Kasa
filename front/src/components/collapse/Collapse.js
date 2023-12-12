@@ -1,4 +1,10 @@
+
+
+
 import React, { useState } from 'react';
+import "./Collapse.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const Collapse = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -6,16 +12,21 @@ const Collapse = ({ title, content }) => {
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
   };
-
   return (
     <div>
-      <div onClick={toggleCollapse} style={{ cursor: 'pointer', borderBottom: '1px solid #ccc' }}>
-        <strong>{title}</strong>
+      <div className={`collapse-name ${isOpen ? 'open' : 'closed'}`} onClick={toggleCollapse}>
+        <h3 style={{ margin: '0', marginLeft: '10px' }}>{title}</h3>
+        <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
       </div>
-      {isOpen && <div>{content}</div>}
+      <div className={`collapse-content ${isOpen ? 'open' : 'closed'}`}>
+        {content}
+      </div>
     </div>
   );
 };
 
+
+
 export default Collapse;
+
 
