@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Carousel from "../components/carousel/Carousel";
 import ApartmentTitle from "../components/apartmentTitle/ApartmentTitle";
 import Tags from "../components/tags/Tags";
+import Host from "../components/host/Host";
 
 const ApartmentPage = () => {
   const { id } = useParams();
@@ -30,6 +31,7 @@ const ApartmentPage = () => {
     return <div>Apartment not found</div>;
   }
   const listPictures = filteredApartment.pictures;
+  const host = filteredApartment.host;
   console.log("filtre", filteredApartment);
   console.log(listPictures);
   return (
@@ -45,6 +47,7 @@ const ApartmentPage = () => {
           location={filteredApartment.location}
         />
         <Tags tags={filteredApartment.tags} />
+        <Host picture={host.picture} name={host.name} />
       </section>
     </main>
   );
