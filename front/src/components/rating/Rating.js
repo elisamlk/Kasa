@@ -12,11 +12,11 @@ const Rating = (props) => {
   const stars = [];
 
   for (let i = 0; i < fullStars; i++) {
-    stars.push(<FontAwesomeIcon key={i} icon={faStar} color="#ffd700" />);
+    stars.push(<FontAwesomeIcon key={i} icon={faStar} color="#ff6060" />);
   }
 
   if (hasHalfStar) {
-    stars.push(<FontAwesomeIcon key="half" icon={faStarHalfAlt} color="#ffd700" />);
+    stars.push(<FontAwesomeIcon key="half" icon={faStarHalfAlt} color="#ff6060" />);
   }
 
   const emptyStars = totalStars - stars.length;

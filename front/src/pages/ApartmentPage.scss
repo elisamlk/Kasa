@@ -1,0 +1,22 @@
+.collapse-section{
+    display:flex;
+    justify-content: space-between;
+   
+}
+
+.part-1, .part-2{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+@media screen and (max-width: 766px) {
+  .collapse-section{
+    flex-direction: column;
+  }
+
+  .part-1, .part-2{
+    flex-direction: column;
+   align-items: start;
+  }
+  }

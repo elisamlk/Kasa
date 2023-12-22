@@ -1,0 +1,13 @@
+.tags-list{
+    display: flex;
+    list-style: none;
+    margin-top:1em;
+    li{
+        border:solid 1px #ff6060;
+        padding:0.5em;
+        border-radius: 2em;
+        background-color: #ff6060;
+        color:white;
+        margin-right:1em;
+    }
+}

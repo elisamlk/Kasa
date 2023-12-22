@@ -6,6 +6,7 @@ import Tags from "../components/tags/Tags";
 import Host from "../components/host/Host";
 import Rating from "../components/rating/Rating";
 import Collapse from "../components/collapse/Collapse";
+import "./ApartmentPage.scss";
 
 const ApartmentPage = () => {
   const { id } = useParams();
@@ -34,8 +35,9 @@ const ApartmentPage = () => {
   }
   const listPictures = filteredApartment.pictures;
   const host = filteredApartment.host;
- 
-  console.log("filtre", filteredApartment);
+
+  console.log("filtre", filteredApartment.equipments);
+  const equipements = filteredApartment.equipments.join('\n');
   console.log(listPictures);
   return (
     <main>
@@ -43,19 +45,25 @@ const ApartmentPage = () => {
         <Carousel id={id} pictures={listPictures} />
       </section>
 
-      <section>
+      <section className="part-1">
         <ApartmentTitle
           id={filteredApartment.id}
           title={filteredApartment.title}
           location={filteredApartment.location}
         />
-        <Tags tags={filteredApartment.tags} />
         <Host picture={host.picture} name={host.name} />
-        <Rating rating={filteredApartment.rating}/>
       </section>
-      <section>
-      <Collapse title="Description" content={filteredApartment.description} />
-      <Collapse title="Equipment" content={filteredApartment.equipments.join(', ')} />
+
+      <section className="part-2">
+        <Tags tags={filteredApartment.tags} />
+        <Rating rating={filteredApartment.rating} />
+      </section>
+      <section className="collapse-section">
+        <Collapse title="Description" content={filteredApartment.description} />
+        <Collapse
+          title="Equipement"
+          content={equipements}
+        />
       </section>
     </main>
   );

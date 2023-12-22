@@ -1,30 +1,37 @@
 .collapse-name {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 10px;
-    background-color: #f0f0f0;
-    transition: background-color 0.1s ease;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #ff6060;
+  transition: background-color 0.1s ease;
+  color: white;
+  border-radius: 0.5em;
+  h3 {
+    color: white;
+    padding: 0.5em;
   }
-  
-  .collapse-name.open {
-    background-color: #ccc;
-  }
-  
-  .collapse-content {
-    
-    border: 1px solid #ccc;
-    margin-top: 10px;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.1s ease;
-  }
-  
-  .collapse-content.open {
-    max-height: max-content; /* Ajustez cette valeur en fonction de la hauteur maximale possible du contenu */
-  }
-  
-  
-  
-  
-  
+}
+
+.collapse-name.closed {
+}
+
+.collapse-name.open {
+  background-color: #ccc;
+}
+
+.collapse-content {
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.1s ease;
+}
+
+.collapse-content.open {
+  max-height: max-content;
+}
+
+.collapse-area {
+  width: 100%;
+}

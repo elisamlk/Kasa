@@ -5,7 +5,7 @@ const Tags = (props) => {
   const listTags = props.tags;
   return (
     <div className="apartment-tags">
-      <ul>
+      <ul className="tags-list">
         {listTags.map((item) => (
           <li>{item}</li>
         ))}
