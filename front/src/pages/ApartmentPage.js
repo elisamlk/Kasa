@@ -17,7 +17,7 @@ const ApartmentPage = () => {
         const response = await fetch("../data.json");
         const jsonData = await response.json();
         setApartmentDetail(jsonData.apartments);
-        console.log(jsonData);
+        // console.log(jsonData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -31,7 +31,8 @@ const ApartmentPage = () => {
   const filteredApartment = apartmentDetail.find((item) => item.id === id);
   if (!filteredApartment) {
     // Gérer le cas où aucun appartement n'est trouvé avec l'ID donné
-    return <div>Apartment not found</div>;
+    // return <div>Apartment not found</div>;
+    // ici faire la redirection vers page 404
   }
   const listPictures = filteredApartment.pictures;
   const host = filteredApartment.host;

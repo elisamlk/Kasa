@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./ApartmentCard.scss";
 
 const ApartmentCard = (props) => {
-  console.log(props.id);
+  // console.log(props.id);
   return (
     <Link to={`/apartmentPage/${props.id}`}>
       <div className="apartment-card">
