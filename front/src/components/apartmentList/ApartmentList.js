@@ -10,7 +10,8 @@ const ApartmentList = () => {
       try {
         const response = await fetch("data.json"); // Important ! Fichier dans le dossier public
         const jsonData = await response.json();
-        setApartment(jsonData);
+        console.log(jsonData)
+        setApartment(jsonData.apartments);
         console.log(apartment);
       } catch (error) {
         console.error("Error fetching data:", error);

@@ -16,7 +16,7 @@ const ApartmentPage = () => {
       try {
         const response = await fetch("../data.json");
         const jsonData = await response.json();
-        setApartmentDetail(jsonData);
+        setApartmentDetail(jsonData.apartments);
         console.log(jsonData);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -37,27 +37,32 @@ const ApartmentPage = () => {
   const host = filteredApartment.host;
 
   console.log("filtre", filteredApartment.equipments);
-  const equipements = filteredApartment.equipments.join('\n');
+  const equipements = filteredApartment.equipments.join(`\n `);
   console.log(listPictures);
   return (
     <main>
       <section className="apartment-list">
         <Carousel id={id} pictures={listPictures} />
       </section>
+      <div class="part-info">
+        <section className="part-1">
+          <ApartmentTitle
+            id={filteredApartment.id}
+            title={filteredApartment.title}
+            location={filteredApartment.location}
+          />
+          <Tags tags={filteredApartment.tags} />
 
-      <section className="part-1">
-        <ApartmentTitle
-          id={filteredApartment.id}
-          title={filteredApartment.title}
-          location={filteredApartment.location}
-        />
-        <Host picture={host.picture} name={host.name} />
-      </section>
+        </section>
 
-      <section className="part-2">
-        <Tags tags={filteredApartment.tags} />
-        <Rating rating={filteredApartment.rating} />
-      </section>
+        <section className="part-2">
+          <Host picture={host.picture} name={host.name} />
+
+          <Rating rating={filteredApartment.rating} />
+        </section>
+      </div>
+
+
       <section className="collapse-section">
         <Collapse title="Description" content={filteredApartment.description} />
         <Collapse

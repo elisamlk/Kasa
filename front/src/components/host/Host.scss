@@ -1,8 +1,21 @@
-.host{
-    display: flex;
-    align-items: center;
-    img{
-        border-radius: 4em;
-        width:40%;
+.host {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  img {
+    margin-right: 0.5em;
+    border-radius: 4em;
+    width: 40%;
+    margin-left:0.5em;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .host {
+    margin-top: 0.7em;
+
+    img {
+      width: 30%;
     }
+  }
 }

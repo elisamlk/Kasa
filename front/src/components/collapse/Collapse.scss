@@ -17,15 +17,16 @@
 }
 
 .collapse-name.open {
-  background-color: #ccc;
+  background-color: #ff6060;
 }
 
 .collapse-content {
-  border: 1px solid #ccc;
-  margin-top: 10px;
+  border-radius: 0.5em;
+  background-color: #f6f6f6;
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.1s ease;
+  color: #ff6060;
 }
 
 .collapse-content.open {
@@ -34,4 +35,9 @@
 
 .collapse-area {
   width: 100%;
+  padding: 1em;
+}
+
+.collapse-content{
+  white-space: pre-wrap;
 }

@@ -19,7 +19,7 @@ const Collapse = ({ title, content }) => {
         <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
       </div>
       <div className={`collapse-content ${isOpen ? 'open' : 'closed'}`}>
-        {content}
+        <p className="content-collapse">{content}</p>
       </div>
     </div>
   );

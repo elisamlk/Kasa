@@ -1,10 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import BannerAbout from "../components/banner-about/BannerAbout";
+import Collapse from "../components/collapse/Collapse";
 
 const About = () => {
+  const [about, setAbout] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("data.json");
+        const jsonData = await response.json();
+        setAbout(jsonData.about);
+        console.log(about);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, [about]);
   return (
-    <div>
-      <h1>About Page</h1>
-    </div>
+    <main>
+      <BannerAbout />
+      {/* <section>
+        {about.map((item) => (
+          <Collapse title={item.name} content={item.content} />
+        ))}
+      </section> */}
+
+    </main>
   );
 }
 

@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Footer from "./components/footer/Footer";
 import ApartmentPage from "./pages/ApartmentPage";
+import NotFound from "./components/404/NotFound";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route exact path="/home" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/apartmentPage/:id" component={ApartmentPage} />
+        <Route  component={NotFound}/>
       </Switch>
       <Footer />
     </Router>

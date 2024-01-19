@@ -1,0 +1,19 @@
+.not-found{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 61vh; 
+    align-items: center;
+    flex:1;
+  
+    .item {
+        flex: 1;
+      
+      }
+ 
+    h2{
+        font-size:6em;
+        font-weight: 900;
+    
+    }
+}
