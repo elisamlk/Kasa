@@ -23,17 +23,19 @@
 }
 
 .collapse-content {
-  border-radius: 0.5em;
+  margin-top:-0.5em;
+  border-bottom-left-radius: 0.5em;
+ border-bottom-right-radius: 0.5em;
   background-color: #f6f6f6;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.1s ease;
   color: #ff6060;
 
 }
 
 .collapse-content.open {
   max-height: max-content;
+  
 
 }
 
@@ -44,12 +46,14 @@
 
 .collapse-content {
   white-space: pre-wrap;
+  
 
 }
 
 .content-collapse{
   margin:1em;
   overflow: hidden;
+  
 
 }
 
