@@ -6,13 +6,13 @@ import "./Header.scss";
 const Header = () => {
   return (
     <header>
-      <Link to="/home">
+      <Link to="/">
         <img className="logo-header" src={logo} alt="Logo" />
       </Link>
       <nav>
         <ul>
           <li className="nav-link">
-            <Link to="/home">Accueil</Link>
+            <Link to="/">Accueil</Link>
           </li>
           <li className="nav-link">
             <Link to="/about">À Propos</Link>

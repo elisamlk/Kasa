@@ -6,7 +6,7 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <footer>
-      <Link to="/home">
+      <Link to="/">
         <img src={logoFooter} alt="Logo" />
       </Link>
       <p>© 2020 Kasa. All rights reserved</p>

@@ -25,7 +25,7 @@ const ApartmentPage = () => {
     fetchData();
   }, []);
   if (apartmentDetail === null) {
-    // Afficher un message de chargement ou un composant de chargement
+    // rediriger vers page 404
     return <div>Loading...</div>;
   }
   const filteredApartment = apartmentDetail.find((item) => item.id === id);
