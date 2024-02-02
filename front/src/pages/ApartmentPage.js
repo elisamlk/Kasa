@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import Carousel from "../components/carousel/Carousel";
 import ApartmentTitle from "../components/apartmentTitle/ApartmentTitle";
 import Tags from "../components/tags/Tags";
@@ -9,6 +9,7 @@ import Collapse from "../components/collapse/Collapse";
 import "./ApartmentPage.scss";
 
 const ApartmentPage = () => {
+  const history = useHistory();
   const { id } = useParams();
   const [apartmentDetail, setApartmentDetail] = useState(null);
   useEffect(() => {
@@ -33,6 +34,8 @@ const ApartmentPage = () => {
     // Gérer le cas où aucun appartement n'est trouvé avec l'ID donné
     // return <div>Apartment not found</div>;
     // ici faire la redirection vers page 404
+    history.push("/404");
+    return null;
   }
   const listPictures = filteredApartment.pictures;
   const host = filteredApartment.host;
