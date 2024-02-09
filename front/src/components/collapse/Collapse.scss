@@ -2,14 +2,15 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 10px;
+  padding: 0.6em;
   background-color: #ff6060;
   transition: background-color 0.1s ease;
   color: white;
   border-radius: 0.5em;
+ 
   h3 {
     color: white;
-    padding: 0.5em;
+    font-weight: 400;
   }
 }
 
@@ -22,51 +23,46 @@
   background-color: #ff6060;
 }
 
+.collapse-name.closed{
+
+}
+
 .collapse-content {
-  margin-top:-0.5em;
+  margin-top: -0.2em;
   border-bottom-left-radius: 0.5em;
- border-bottom-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
   background-color: #f6f6f6;
   overflow: hidden;
   max-height: 0;
   color: #ff6060;
-
+  
 }
 
 @keyframes expandHeight {
   from {
-      max-height: 0;
+    max-height: 0;
   }
   to {
-      max-height: 1000px;
+    max-height: 1000px;
   }
 }
 
 .collapse-content.open {
   // max-height: max-content;
   overflow: hidden;
-    animation: expandHeight 2s ease-in-out forwards;
-
-  
-
+  animation: expandHeight 2s ease-in-out forwards;
 }
 
 .collapse-area {
-  width: 100%;
-  padding: 1em;
+  width:100%;
+  margin-top: 2em;
 }
 
 .collapse-content {
   white-space: pre-wrap;
-  
-
 }
 
-.content-collapse{
-  margin:1em;
+.content-collapse {
+  margin: 2em;
   overflow: hidden;
-  
-
 }
-
-

@@ -1,21 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import logo from "../../img/logo.png";
 import "./Header.scss";
 
 const Header = () => {
   return (
     <header>
-      <Link to="/">
+      <NavLink exact to="/" >
         <img className="logo-header" src={logo} alt="Logo" />
-      </Link>
+      </NavLink>
       <nav>
         <ul>
           <li className="nav-link">
-            <Link to="/">Accueil</Link>
+            <NavLink exact to="/" activeClassName="active-link">Accueil</NavLink>
           </li>
           <li className="nav-link">
-            <Link to="/about">À Propos</Link>
+            <NavLink to="/about" activeClassName="active-link">À Propos</NavLink>
           </li>
         </ul>
       </nav>

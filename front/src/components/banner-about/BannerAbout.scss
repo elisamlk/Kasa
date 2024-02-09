@@ -1,6 +1,6 @@
 .banner-about-section {
   background: url(../../img/banner-about.png) center/cover;
-  height: 15em;
+  height: 9em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width: 766px) {
-  .banner-section {
-    height: 10em;
+  .banner-section-section {
+    height: 6em;
   }
 }

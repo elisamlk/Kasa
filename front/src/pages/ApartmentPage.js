@@ -56,7 +56,6 @@ const ApartmentPage = () => {
             location={filteredApartment.location}
           />
           <Tags tags={filteredApartment.tags} />
-
         </section>
 
         <section className="part-2">
@@ -66,13 +65,9 @@ const ApartmentPage = () => {
         </section>
       </div>
 
-
       <section className="collapse-section">
         <Collapse title="Description" content={filteredApartment.description} />
-        <Collapse
-          title="Equipement"
-          content={equipements}
-        />
+        <Collapse title="Equipement" content={equipements} />
       </section>
     </main>
   );

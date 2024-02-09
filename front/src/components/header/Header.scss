@@ -14,14 +14,20 @@ header {
   }
   a {
     text-decoration: none;
-    color: #ef6768;
+    color: #000000;
+  }
+  .active-link {
+    border-bottom: 1px solid #000000;
+  }
+  .logo-header {
+    width: 8em;
   }
 }
 
 @media screen and (max-width: 766px) {
   header {
     .logo-header {
-      width: 6.5em;
+      width: 6em;
     }
     .nav-link {
       font-size: 0.8em;
