@@ -21,8 +21,8 @@ const About = () => {
     <main>
       <BannerAbout />
       <section className="theme-area">
-        {about.map((item) => (
-          <Collapse title={item.name} content={item.content} />
+        {about.map((item, id) => (
+          <Collapse key={id} title={item.name} content={item.content} />
         ))}
       </section>
 

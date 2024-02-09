@@ -23,8 +23,8 @@ const ApartmentList = () => {
 
   return (
     <section className="apartment-list">
-      {apartment.map((item) => (
-        <ApartmentCard id={item.id} cover={item.cover} title={item.title} />
+      {apartment.map((item, id) => (
+        <ApartmentCard key={id} id={item.id} cover={item.cover} title={item.title} />
       ))}
     </section>
   );

@@ -40,15 +40,15 @@ const ApartmentPage = () => {
   const listPictures = filteredApartment.pictures;
   const host = filteredApartment.host;
 
-  console.log("filtre", filteredApartment.equipments);
+  // console.log("filtre", filteredApartment.equipments);
   const equipements = filteredApartment.equipments.join(`\n `);
-  console.log(listPictures);
+  // console.log(listPictures);
   return (
     <main>
       <section className="apartment-list">
         <Carousel id={id} pictures={listPictures} />
       </section>
-      <div class="part-info">
+      <div className="part-info">
         <section className="part-1">
           <ApartmentTitle
             id={filteredApartment.id}

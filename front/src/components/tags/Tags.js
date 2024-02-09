@@ -6,8 +6,8 @@ const Tags = (props) => {
   return (
     <div className="apartment-tags">
       <ul className="tags-list">
-        {listTags.map((item) => (
-          <li>{item}</li>
+        {listTags.map((item, id) => (
+          <li key={id}>{item}</li>
         ))}
       </ul>
     </div>

@@ -8,16 +8,20 @@ import Footer from "./components/footer/Footer";
 import ApartmentPage from "./pages/ApartmentPage";
 import NotFound from "./components/404/NotFound";
 
+
+
 const App = () => {
   return (
     <Router>
       <Header />
+
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/apartmentPage/:id" component={ApartmentPage} />
-        <Route component={NotFound}/>
+        <Route exact path="/about" component={About} />
+        <Route exact path="/apartmentPage/:id" component={ApartmentPage} />
+        <Route path="*" component={NotFound} />
       </Switch>
+
       <Footer />
     </Router>
   );
