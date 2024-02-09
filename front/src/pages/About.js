@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import BannerAbout from "../components/banner-about/BannerAbout";
 import Collapse from "../components/collapse/Collapse";
+import "./About.scss";
 
 const About = () => {
   const [about, setAbout] = useState([]);
@@ -19,7 +20,7 @@ const About = () => {
   return (
     <main>
       <BannerAbout />
-      <section>
+      <section className="theme-area">
         {about.map((item) => (
           <Collapse title={item.name} content={item.content} />
         ))}

@@ -67,6 +67,7 @@ const ApartmentPage = () => {
 
       <section className="collapse-section">
         <Collapse title="Description" content={filteredApartment.description} />
+        <div className="spacer"></div>
         <Collapse title="Equipement" content={equipements} />
       </section>
     </main>

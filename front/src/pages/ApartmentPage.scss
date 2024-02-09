@@ -9,6 +9,10 @@
   justify-content: space-between;
 }
 
+.spacer {
+  width:10%;
+}
+
 @media screen and (max-width: 766px) {
   .collapse-section {
     flex-direction: column;
