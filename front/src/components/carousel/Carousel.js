@@ -19,7 +19,7 @@ const Carousel = (props) => {
     );
   };
 
-  // If there's only one photo, hide the chevrons
+  
   const showChevrons = listPictures.length > 1;
 
   return (
