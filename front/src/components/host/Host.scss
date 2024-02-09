@@ -2,17 +2,19 @@
   display: flex;
   align-items: center;
   margin-top: 1em;
+  justify-content: flex-end;
   img {
     margin-right: 0.5em;
     border-radius: 4em;
-    width: 40%;
-    margin-left:0.5em;
+    width: 30%;
+    margin-left: 0.5em;
   }
 }
 
 @media screen and (max-width: 766px) {
   .host {
     margin-top: 0.7em;
+    justify-content: flex-end;
 
     img {
       width: 20%;
